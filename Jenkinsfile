@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+ agent {
+    node {
+      label 'master'
+      customWorkspace 'd:d:/jenkinTest'
+    }
+  }
   stages {
     stage('') {
       steps {
